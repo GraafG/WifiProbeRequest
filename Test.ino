@@ -24,7 +24,7 @@ uint8_t packet[128] = { 0x40, 0x00, 0x00, 0x00,
 
 void setup() {
   delay(500);
-  //wifi_set_opmode(STATION_MODE);
+  wifi_set_opmode(STATION_MODE);
   wifi_promiscuous_enable(1); 
 }
 
@@ -37,20 +37,20 @@ void loop() {
     wifi_set_channel(channel);
 
     // Randomize SRC MAC
-    //packet[10] = packet[16] = random(256);
-    //packet[11] = packet[17] = random(256);
-    //packet[12] = packet[18] = random(256);
-    //packet[13] = packet[19] = random(256);
-    //packet[14] = packet[20] = random(256);
-    //packet[15] = packet[21] = random(256);
+    packet[10] = random(256);
+    packet[11] = random(256);
+    packet[12] = random(256);
+    packet[13] = random(256);
+    packet[14] = random(256);
+    packet[15] = random(256);
 
     // SSID (Fixed size 6. Lazy right?)
-    //packet[26] = alfa[random(65)];
-    //packet[27] = alfa[random(65)];
-    //packet[28] = alfa[random(65)];
-    //packet[29] = alfa[random(65)];
-    //packet[30] = alfa[random(65)];
-    //packet[31] = alfa[random(65)];
+    packet[26] = alfa[random(65)];
+    packet[27] = alfa[random(65)];
+    packet[28] = alfa[random(65)];
+    packet[29] = alfa[random(65)];
+    packet[30] = alfa[random(65)];
+    packet[31] = alfa[random(65)];
     
     //packet[56] = channel;
     
