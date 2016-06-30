@@ -7,7 +7,7 @@ extern "C" {
 String alfa = "1234567890qwertyuiopasdfghjkklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM_";
 byte channel;
 
-// Beacon Packet buffer
+// Probe request Packet buffer
 uint8_t packet[128] = { 0x40, 0x00, 0x00, 0x00, 
                 /*4*/   0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 
                 /*10*/  0x01, 0x02, 0x03, 0x04, 0x05, 0x06,
